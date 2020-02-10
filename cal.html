@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>cal</title>
+    <script>
+        function displayV(val) {
+            document.getElementById("t").value+=val;
+        }
+        function calculator() {
+            let x=document.getElementById("t").value;
+            let y=eval(x);
+            document.getElementById("t").value=y;
+        }
+        function pp() {
+            document.getElementById("t").value="";
+        }
+    </script>
+    <style>
+        input[type="button"]
+        {
+            border-radius: 12px;
+            background-color: green;
+            color: white;
+            width: 100%;
+        }
+    </style>
+</head>
+<body style="margin: 200px">
+<div class="mb-0 mx-5 mt-5">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b><u>CALCULATOR</u></b><br><br>
+</div>
+<div class="mt-0 mx-5 mb-5">
+    <table border="1" size="60%">
+        <tr>
+            <td>
+                <input type="button" value="C" onclick="pp()">
+            </td>
+            <td colspan="3"><input type="text" id="t"></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="+" onclick="displayV('+')">
+            </td>
+            <td>
+                <input type="button" value="1" onclick="displayV('1')">
+            </td>
+            <td>
+                <input type="button" value="2" onclick="displayV('2')">
+            </td>
+            <td>
+                <input type="button" value="3" onclick="displayV('3')">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="-" onclick="displayV('-')">
+            </td>
+            <td>
+                <input type="button" value="4" onclick="displayV('4')">
+            </td>
+            <td>
+                <input type="button" value="5" onclick="displayV('5')">
+            </td>
+            <td>
+                <input type="button" value="6" onclick="displayV('6')">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="*" onclick="displayV('*')">
+            </td>
+            <td>
+                <input type="button" value="7" onclick="displayV('7')">
+            </td>
+            <td>
+                <input type="button" value="8" onclick="displayV('8')">
+            </td>
+            <td>
+                <input type="button" value="9" onclick="displayV('9')">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="/" onclick="displayV('/')">
+            </td>
+            <td>
+                <input type="button" value="." onclick="displayV('.')">
+            </td>
+            <td>
+                <input type="button" value="0" onclick="displayV('0')">
+            </td>
+            <td>
+                <input type="button" value="=" onclick="calculator()">
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
